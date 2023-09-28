@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.meals_app'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.meals_app"
         minSdk 21
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -47,6 +47,8 @@ android {
 }
 
 dependencies {
+    def nav_version = "2.5.3"
+    implementation "androidx.navigation:navigation-compose:$nav_version"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
