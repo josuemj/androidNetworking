@@ -18,12 +18,14 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.meals_app.R
+import com.example.meals_app.navigation.Model
 
 
-@Preview
+
 @Composable
-fun LaunchScreen(){
+fun LaunchScreen(navController: NavController){
 
     Column(
         modifier = Modifier
@@ -47,7 +49,9 @@ fun LaunchScreen(){
             ) {
                 Text(text = "App tittle")
                 LaunchImage()
-                Button(onClick = { /*TODO*/ }) {
+                Button(onClick = {
+                    navController.navigate(Model.Categories.route)
+                }) {
                     Text(text = "Go")
                 }
             }
