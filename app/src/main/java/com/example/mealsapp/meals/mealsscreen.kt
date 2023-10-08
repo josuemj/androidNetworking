@@ -30,6 +30,7 @@ fun mealsscreen(navController: NavController) {
                 text = AnnotatedString(text = meal.name),
                 onClick = { offset ->
                     navController.navigate("Category/${meal.name}")
+
                 }
             )
         }
