@@ -15,7 +15,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun topbar(tittle:String){
+fun topbar(
+    tittle:String,
+    color: Color
+){
     Box(
 
         contentAlignment = Alignment.Center,
@@ -24,7 +27,7 @@ fun topbar(tittle:String){
             .height(50.dp)
             .background(
                 brush = Brush.verticalGradient(
-                    colors = listOf(Color.White, Color(0xFF3a62d2))  // Gradient from Red to Blue
+                    colors = listOf(Color.White, color)  // Gradient from Red to Blue
                 ))
     ){
         Text(

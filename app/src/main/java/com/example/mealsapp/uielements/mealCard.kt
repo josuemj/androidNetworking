@@ -20,13 +20,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun categoryCard(
-    mealId: String,
-    route:String,
+fun mealCard(
     mealName: AnnotatedString,
-    navController: NavController
-){
-
+    navController:NavController
+)
+{
     Box(
 
         modifier = Modifier
@@ -36,11 +34,11 @@ fun categoryCard(
             .background(
                 shape = RoundedCornerShape(10.dp),
                 brush = Brush.verticalGradient(
-                colors = listOf(Color.White,Color(0xFF2596be))  // Gradient from Red to Blue
-            ))
+                    colors = listOf(Color.White,Color(0xFFf1aa35))  // Gradient from Red to Blue
+                ))
             .clickable(
                 onClick = {
-                    navController.navigate("${route}/${mealId}")
+                    navController.navigate("Category/${mealName}")
 
                 }
             )
@@ -54,5 +52,4 @@ fun categoryCard(
 
         )
     }
-
 }
